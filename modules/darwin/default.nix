@@ -13,7 +13,7 @@
   '';
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
-  fonts.fontDir.enable = false; # DANGER
+  fonts.fontDir.enable = true; # DANGER
   fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" "JetBrains" ]; }) ];
   services.nix-daemon.enable = true;
   system.defaults = {
@@ -24,8 +24,33 @@
     NSGlobalDomain.InitialKeyRepeat = 14;
     NSGlobalDomain.KeyRepeat = 1;
   };
-  # backwards compat; don't change
-  system.stateVersion = 4;
+
+  system = {
+  
+    stateVersion = 4;
+
+    defaults = {
+      
+      dock = {
+        autohide = true;
+        show-recents = false;
+        launchanim = true;
+        mouse-over-hilite-stack = true;
+        orientation = "bottom";
+        tilesize = 48;
+      };
+    
+      finder = {
+        _FXShowPosixPathInTitle = true;
+      };
+      
+      trackpad = {
+        Clicking = true;
+        TrackpadThreeFingerDrag = true;
+      };
+  }
+  
+  # Homebrew section - Move this to a seperate config?
   homebrew = {
     enable = true;
     caskArgs.no_quarantine = true;
