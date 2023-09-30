@@ -14,15 +14,10 @@
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
   fonts.fontDir.enable = true; # DANGER
-  fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" "JetBrains" ]; }) ];
+  fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" "JetBrainsMono" ]; }) ];
   services.nix-daemon.enable = true;
   system.defaults = {
-    finder.AppleShowAllExtensions = true;
-    finder._FXShowPosixPathInTitle = true;
-    dock.autohide = true;
-    NSGlobalDomain.AppleShowAllExtensions = true;
-    NSGlobalDomain.InitialKeyRepeat = 14;
-    NSGlobalDomain.KeyRepeat = 1;
+
   };
 
   system = {
@@ -42,13 +37,21 @@
     
       finder = {
         _FXShowPosixPathInTitle = true;
+        AppleShowAllExtensions = true;
       };
       
       trackpad = {
         Clicking = true;
         TrackpadThreeFingerDrag = true;
       };
-  }
+
+      NSGlobalDomain = {
+        AppleShowAllExtensions = true;
+        InitialKeyRepeat = 14;
+        KeyRepeat = 1;
+      };
+    };
+  };
   
   # Homebrew section - Move this to a seperate config?
   homebrew = {

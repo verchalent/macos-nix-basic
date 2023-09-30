@@ -15,9 +15,12 @@
 
   };
   outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
-    darwinConfigurations.Demos-Virtual-Machine = darwin.lib.darwinSystem {
+    darwinConfigurations.MrMacPants = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
-      pkgs = import nixpkgs { system = "aarch64-darwin"; };
+      pkgs = import nixpkgs { 
+        system = "aarch64-darwin";
+        config.allowUnfree = true; #testing
+        };
       modules = [
         ./modules/darwin
         home-manager.darwinModules.home-manager
