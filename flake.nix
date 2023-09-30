@@ -14,7 +14,7 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
   };
-  outputs = inputs@{ nixpkgs, home-manager, darwin, pwnvim, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
     darwinConfigurations.Demos-Virtual-Machine = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       pkgs = import nixpkgs { system = "aarch64-darwin"; };
