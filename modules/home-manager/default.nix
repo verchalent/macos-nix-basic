@@ -9,6 +9,7 @@
     less
     lsd
     procs
+    obsidian
   ];
   home.sessionVariables = {
     PAGER = "less";
@@ -16,7 +17,7 @@
     EDITOR = "nvim";
   };
   programs.bat.enable = true;
-  programs.bat.config.theme = "TwoDark";
+  programs.bat.config.theme = "Dracula";
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
   programs.git.enable = true;
@@ -36,11 +37,6 @@
   };
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;
-  programs.alacritty = {
-    enable = true;
-    settings.font.normal.family = "MesloLGS Nerd Font Mono";
-    settings.font.size = 16;
-  };
   home.file.".inputrc".source = ./dotfiles/inputrc;
   home.file.".wezterm.lua".source = ./dotfiles/wezterm.lua;
 }

@@ -25,7 +25,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.demo.imports = [ ./modules/home-manager ];
+            users.verchalent.imports = [ ./modules/home-manager ];
           };
         }
       ];
