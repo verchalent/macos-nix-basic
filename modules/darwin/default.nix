@@ -31,8 +31,25 @@
     caskArgs.no_quarantine = true;
     global.brewfile = true;
     masApps = { };
-    casks = [ "alfred" "wezterm"];
     taps = [ "fujiapple852/trippy" ];
+    casks = [ 
+      {
+        name = "alfred" ; #spotlight replacement
+        greedy = true;
+      }
+      {
+        name = "wezterm" ; #fancy terminal
+        greedy = true;
+      }
+            {
+        name = "spotify" ; #music
+        greedy = true;
+      }
+      {
+        name = "bartender"; # organize status bar
+        greedy = true;
+      }
+    ];
     brews = [ "trippy" ];
   };
 }
