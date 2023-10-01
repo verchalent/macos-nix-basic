@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  # here go the darwin preferences and config items
+  imports = [./brew.nix];
   programs.zsh.enable = true;
   environment = {
     shells = with pkgs; [ bash zsh ];
@@ -51,33 +51,5 @@
         KeyRepeat = 1;
       };
     };
-  };
-  
-  # Homebrew section - Move this to a seperate config?
-  homebrew = {
-    enable = true;
-    caskArgs.no_quarantine = true;
-    global.brewfile = true;
-    masApps = { };
-    taps = [ "fujiapple852/trippy" ];
-    casks = [ 
-      {
-        name = "alfred" ; #spotlight replacement
-        greedy = true;
-      }
-      {
-        name = "wezterm" ; #fancy terminal
-        greedy = true;
-      }
-            {
-        name = "spotify" ; #music
-        greedy = true;
-      }
-      {
-        name = "bartender"; # organize status bar
-        greedy = true;
-      }
-    ];
-    brews = [ "trippy" ];
   };
 }

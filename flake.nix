@@ -15,10 +15,10 @@
 
   };
   outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
-    darwinConfigurations.MrMacPants = darwin.lib.darwinSystem {
-      system = "aarch64-darwin";
+    darwinConfigurations.SYSTEMNAME = darwin.lib.darwinSystem {
+      system = "ARCH";
       pkgs = import nixpkgs { 
-        system = "aarch64-darwin";
+        system = "ARCH";
         config.allowUnfree = true; #testing
         };
       modules = [
@@ -28,7 +28,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.verchalent.imports = [ ./modules/home-manager ];
+            users.USERNAME.imports = [ ./modules/home-manager ];
           };
         }
       ];
