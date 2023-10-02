@@ -35,6 +35,9 @@
       finder = {
         _FXShowPosixPathInTitle = true;
         AppleShowAllExtensions = true;
+        FXPreferredViewStyle = Nlsv;
+        ShowStatusBar = true;
+
       };
       
       trackpad = {
@@ -47,6 +50,8 @@
         InitialKeyRepeat = 14;
         KeyRepeat = 1;
       };
+
+      menuExtraClock.Show24Hour = true;
     };
   };
 }

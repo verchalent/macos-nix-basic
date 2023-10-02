@@ -9,7 +9,6 @@
     less
     lsd
     procs
-    obsidian
   ];
   home.sessionVariables = {
     PAGER = "less";
@@ -25,6 +24,12 @@
   programs.zsh.enableCompletion = true;
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.SyntaxHighlighting.enable = true;
+  programs.direnv = {
+    enable = true;
+    nix-direnv = {
+      enable = true;
+    };
+  };
   programs.zsh.shellAliases = {
     ls = "lsd";
     cat = "bat";
@@ -32,8 +37,8 @@
     vi = "nvim";
     ll = "lsd -l";
     ps = "procs";
-    nixswitch = "darwin-rebuild switch --flake ~/src/system-config/.#";
-    nixup = "pushd ~/src/system-config; nix flake update; nixswitch; popd";
+    nixswitch = "darwin-rebuild switch --flake ~/src/macos-nix-basic/.#";
+    nixup = "pushd ~/src/macos-nix-basic; nix flake update; nixswitch; popd";
   };
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;

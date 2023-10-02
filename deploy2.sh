@@ -1,5 +1,6 @@
-
 #!/usr/bin/env bash
+
+# TO DO - move flake corrections to seperate file. This will allow for updates from github and corrections without needing to rebuild.
 
 #vars
 if (($(uname -o) == "Darwin")); then

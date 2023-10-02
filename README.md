@@ -1,6 +1,6 @@
 # Summary
 
-This is a fork of https://github.com/zmre/mac-nix-simple-example created to learn Nix and adjust for my custom setup.
+This is a fork of https://github.com/zmre/mac-nix-simple-example created to learn Nix and adjust for my custom setup. It is still in early testing as of 10.2023.
 
 ## Changes
 

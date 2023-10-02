@@ -28,6 +28,10 @@
         greedy = true;
       }
       {
+        name = "obsidian";
+        greedy = true;
+      }
+      {
         name = "raycast" ; 
         greedy = true;
       }
@@ -36,11 +40,15 @@
         greedy = true;
       }
       {
-        name = "spotify" ;
+        name = "spotify";
         greedy = true;
       }
       {
-        name = "wezterm" ;
+        name = "vscode";
+        greedy = true;
+      }     
+      {
+        name = "wezterm";
         greedy = true;
       }
     ];
