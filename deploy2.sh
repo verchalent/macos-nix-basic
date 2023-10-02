@@ -18,7 +18,7 @@ sed -i "s/USERNAME/$uname/g" flake.nix
 sed -i "s/USERNAME/$uname/g" ./modules/darwin/default.nix
 sed -i "s/ARCH/$aarch/g" flake.nix
 
-# Add changed items back to local git to allow build
+# Add changed items back to local git to allow build - move to branch per system?
 git init
 git add .
 

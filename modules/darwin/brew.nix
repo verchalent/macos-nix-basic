@@ -23,10 +23,11 @@
         name = "bartender";
         greedy = true;
       }
-      {
-        name = "firefox";
-        greedy = true;
-      }
+# Brew gets mad if this is already on the system. Need to fix config.
+#     {
+#        name = "firefox";
+#        greedy = true;
+#      }
       {
         name = "obsidian";
         greedy = true;

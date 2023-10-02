@@ -3,12 +3,15 @@
   home.stateVersion = "23.05";
   # specify my home-manager configs
   home.packages = with pkgs; [
-    ripgrep
-    fd
+    awscli2
     curl
+    fd
     less
     lsd
+    neovim
+    powershell
     procs
+    ripgrep
   ];
   home.sessionVariables = {
     PAGER = "less";
