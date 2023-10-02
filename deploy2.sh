@@ -24,7 +24,7 @@ git add .
 
 # Below this line may need to be in new terminal
 # Bootstrap Nix Darwin
-nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer ./result/bin/darwin-installer
+#nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer ./result/bin/darwin-installer
 
 # Init Flake
 nix  --extra-experimental-features "nix-command flakes" run nix-darwin -- switch --flake ~/src/macos-nix-basic
