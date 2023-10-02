@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+  users.users.USERNAME.home = "/Users/USERNAME";
   imports = [./brew.nix];
   programs.zsh.enable = true;
   environment = {
