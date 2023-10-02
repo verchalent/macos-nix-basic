@@ -24,7 +24,7 @@
   programs.zsh.enable = true;
   programs.zsh.enableCompletion = true;
   programs.zsh.enableAutosuggestions = true;
-  programs.zsh.enableSyntaxHighlighting = true;
+  programs.zsh.SyntaxHighlighting.enable = true;
   programs.zsh.shellAliases = {
     ls = "lsd";
     cat = "bat";
