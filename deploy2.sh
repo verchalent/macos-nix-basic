@@ -2,11 +2,12 @@
 #!/usr/bin/env bash
 
 #vars
-if [$(uname -o) = 'Darwin']; then
+if (($(uname -o) == "Darwin")); then
      aarch="$(uname -m)-Darwin"
 else
     aarch="$(uname -m)-linux"
 fi
+
 uname=$(whoami)
 sysname=$(hostname -s)
 
@@ -16,6 +17,7 @@ sed -i "s/USERNAME/$uname/g" flake.nix
 sed -i "s/ARCH/$aarch/g" flake.nix
 
 # Add changed items back to local git to allow build
+git init
 git add .
 
 # Below this line may need to be in new terminal
