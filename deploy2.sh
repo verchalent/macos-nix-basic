@@ -15,6 +15,7 @@ sysname=$(hostname -s)
 # Replace System Name, Username and Arch with correct values for system
 sed -i "s/SYSTEMNAME/$sysname/g" flake.nix
 sed -i "s/USERNAME/$uname/g" flake.nix
+sed -i "s/USERNAME/$uname/g" ./modules/darwin/default.nix
 sed -i "s/ARCH/$aarch/g" flake.nix
 
 # Add changed items back to local git to allow build

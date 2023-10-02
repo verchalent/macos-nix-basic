@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Download repo
-mkdir -p ~/src
-curl https://github.com/verchalent/macos-nix-basic/archive/refs/heads/master.zip
-cd src
-unzip ~/Downloads/macos-nix-basic-master.zip
-
 #Install nix
 sh <(curl -L https://nixos.org/nix/install)
 
