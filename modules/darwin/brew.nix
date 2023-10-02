@@ -26,7 +26,7 @@
       {
         name = "firefox";
         greedy = true;
-      }bar
+      }
       {
         name = "raycast" ; 
         greedy = true;
