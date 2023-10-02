@@ -3,7 +3,7 @@
 
 #vars
 if (($(uname -o) == "Darwin")); then
-     aarch="$(uname -m)-Darwin"
+     aarch="$(uname -m)-darwin"
 else
     aarch="$(uname -m)-linux"
 fi
