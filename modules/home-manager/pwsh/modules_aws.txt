@@ -1,0 +1,8 @@
+AppStream
+Common
+DynamoDBv2
+EC2
+S3
+SecurityToken
+SimpleSystemsManagement
+WorkSpaces

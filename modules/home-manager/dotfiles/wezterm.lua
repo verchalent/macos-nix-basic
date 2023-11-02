@@ -11,7 +11,7 @@ return {
 
   -- Font Settings
   font = wezterm.font('JetBrains Mono'),
-  font_size = 10.0,
+  font_size = 14.0,
   default_cursor_style = 'SteadyUnderline',
 
   -- Disable ligatures - don't know if I care

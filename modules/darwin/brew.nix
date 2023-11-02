@@ -9,7 +9,7 @@
       cleanup = "uninstall";
     };
     global.brewfile = true;
-    masApps = { };
+    masApps = { }; # Move to seperate file
     taps = [
         "homebrew/core"
         "homebrew/bundle"
@@ -29,30 +29,46 @@
 #        greedy = true;
 #      }
       {
-        name = "obsidian";
+        name = "geany"; #notepad++ replacement
         greedy = true;
       }
       {
-        name = "raycast" ; 
+        name = "microsoft-edge"; #Edge for use with M365 items 
         greedy = true;
       }
       {
-        name = "signal";
+        name = "obsidian"; #2nd Brain
         greedy = true;
       }
       {
-        name = "spotify";
+        name = "podman-desktop"; #control pods
         greedy = true;
       }
       {
-        name = "vscode";
+        name = "raycast" ; #Spotlight replacement
+        greedy = true;
+      }
+      {
+        name = "signal"; #Desktop client for Signal
+        greedy = true;
+      }
+      {
+        name = "spotify"; #Muzak
+        greedy = true;
+      }
+      {
+        name = "visual-studio-code"; #Make code pretty
         greedy = true;
       }     
       {
-        name = "wezterm";
+        name = "wezterm"; #Replacement for iTerm
+        greedy = true;
+      }
+      {
+        name = "wireshark"; #Network packat analysis
         greedy = true;
       }
     ];
-    brews = [ "trippy" ];
+    brews = [ "trippy" ]; 
   };
 }

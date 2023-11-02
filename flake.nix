@@ -15,11 +15,11 @@
 
   };
   outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
-    darwinConfigurations.SYSTEMNAME = darwin.lib.darwinSystem {
-      system = "ARCH";
+    darwinConfigurations.Tamanoya = darwin.lib.darwinSystem {
+      system = ARCH;
       pkgs = import nixpkgs { 
-        system = "ARCH";
-        config.allowUnfree = true; #testing
+        system = ARCH;
+        config.allowUnfree = true;
         };
       modules = [
         ./modules/darwin
